@@ -10,6 +10,7 @@ import lombok.Getter;
 public enum ResultEnum {
 
     PARAM_ERROR(1, "参数错误"),
+    CART_EMPTY(2, "购物机为空")
     ;
 
     private Integer code;
