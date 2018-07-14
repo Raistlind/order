@@ -1,5 +1,6 @@
 package cn.krynn.order.client;
 
+import cn.krynn.order.dataobject.CartDTO;
 import cn.krynn.order.dataobject.ProductInfo;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,4 +21,7 @@ public interface ProductClient {
 
     @PostMapping("/product/listForOrder")
     List<ProductInfo> listForOrder(@RequestBody List<String> productIdList);
+
+    @PostMapping("/product/decreaseStock")
+    void decreaseStock(@RequestBody List<CartDTO> cartDTOList);
 }
