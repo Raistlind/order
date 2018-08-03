@@ -2,9 +2,6 @@ package cn.krynn.order.dto;
 
 import cn.krynn.order.dataobject.OrderDetail;
 import lombok.Data;
-import org.apache.catalina.LifecycleState;
-
-import javax.persistence.Id;
 import java.math.BigDecimal;
 import java.util.List;
 
