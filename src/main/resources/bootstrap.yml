@@ -8,12 +8,17 @@ spring:
 #    url: jdbc:mysql://10.0.0.136:3306/SpringCloud_Sell?characterEncoding=utf-8&useSSL=false
 #  jpa:
 #    show-sql: true
+
   cloud:
     config:
       discovery:
         enabled: true
         service-id: CONFIG
       profile: dev
+    stream:
+      bindings:
+        myMessage:
+          group: order
 #eureka:
 #  client:
 #    service-url:
