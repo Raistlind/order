@@ -69,7 +69,7 @@ public class OrderController {
      * @return
      */
     @PostMapping("/finish")
-    public ResultVO<OrderDTO> finish(@RequestParam(value = "orderId", required = true) String orderId) {
+    public ResultVO<OrderDTO> finish(@RequestParam("orderId") String orderId) {
         return ResultVOUtil.success(orderService.finish(orderId));
     }
 }
